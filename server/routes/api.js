@@ -35,4 +35,11 @@ router.post("/articles", async (req,res)=>{
     res.send(articles)
 })
 
+router.post("/slugsearch", async (req,res)=>{
+    let slug = req.body.slug
+    const article = await Article.findOne({ slug: slug })
+    if(article == null) res.send(null)
+    else res.send(article)
+})
+
 module.exports = router
