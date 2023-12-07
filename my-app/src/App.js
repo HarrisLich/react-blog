@@ -2,6 +2,7 @@ import Home from './views/Home';
 import './App.css';
 import ParticlesBackground from './components/ParticlesBackground';
 import ViewTwo from './views/ViewTwo';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         </div>
       </div>
       <ViewTwo/>
+      <Footer/>
     </div>
   );
 }

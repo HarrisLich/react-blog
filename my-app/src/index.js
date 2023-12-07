@@ -7,7 +7,9 @@ import Articles from './views/Articles';
 import NewArticle from './views/NewArticle';
 import SingleArticle from './components/SingleArticle';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from './views/Login';
 import NotFound from './views/NotFound'
+import Signup from './views/Signup';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +21,8 @@ root.render(
         <Route path="/articles" element={<Articles />}></Route>
         <Route path="/articles/new" element={<NewArticle />}></Route>
         <Route path='/articles/:slug' element={<SingleArticle />}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/signup" element={<Signup/>}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
